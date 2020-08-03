@@ -12,7 +12,7 @@ void main() {
         backgroundColor: Colors.deepPurple[500],
         body: Center(
           child: Image(
-            image: NetworkImage('https://i.imgur.com/ffdWq2M.jpg'),
+            image: AssetImage('images/diamond.png'),
           ),
         ),
       ),
