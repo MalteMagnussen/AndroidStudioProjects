@@ -10,10 +10,11 @@ void main() {
           backgroundColor: Colors.blueGrey[900],
         ),
         backgroundColor: Colors.deepPurple[500],
-        body: Image(
-          image: NetworkImage('https://i.imgur.com/ffdWq2M.jpg'),
+        body: Center(
+          child: Image(
+            image: NetworkImage('https://i.imgur.com/ffdWq2M.jpg'),
+          ),
         ),
-        //Image.network("https://i.imgur.com/ffdWq2M.jpg"),
       ),
     ),
   );
