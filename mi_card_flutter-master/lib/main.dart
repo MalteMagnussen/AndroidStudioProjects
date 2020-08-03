@@ -9,33 +9,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Column(
+          child: Row(
             //mainAxisSize: MainAxisSize.min,
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             //verticalDirection: VerticalDirection.down,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                height: 100.0,
-                color: Colors.white,
-                child: Text(
-                  'Container 1',
-                ),
+                child: Column(mainAxisSize: MainAxisSize.max),
+                width: 100.0,
+                decoration: const BoxDecoration(color: Colors.red),
               ),
-              SizedBox(
-                height: 20.0,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    color: Colors.yellow,
+                    height: 100.0,
+                    width: 100.0,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    height: 100.0,
+                    width: 100.0,
+                  ),
+                ],
               ),
               Container(
-                height: 100.0,
-                color: Colors.lightBlue,
-                child: Text("Container 2"),
-              ),
-              Container(
-                height: 100.0,
-                color: Colors.red,
-                child: Text("Container 3"),
+                child: Column(mainAxisSize: MainAxisSize.max),
+                width: 100.0,
+                decoration: const BoxDecoration(color: Colors.blue),
               ),
             ],
           ),
