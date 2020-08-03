@@ -9,6 +9,11 @@ void main() {
           title: Text("I Am Rich"),
           backgroundColor: Colors.blueGrey[900],
         ),
+        backgroundColor: Colors.deepPurple[500],
+        body: Image(
+          image: NetworkImage('https://i.imgur.com/ffdWq2M.jpg'),
+        ),
+        //Image.network("https://i.imgur.com/ffdWq2M.jpg"),
       ),
     ),
   );
