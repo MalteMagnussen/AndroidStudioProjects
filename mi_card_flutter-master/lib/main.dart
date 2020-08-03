@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             //mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            verticalDirection: VerticalDirection.down,
+            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //verticalDirection: VerticalDirection.down,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
                 child: Text(
                   'Container 1',
                 ),
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Container(
                 height: 100.0,
