@@ -24,6 +24,24 @@ class MyApp extends StatelessWidget {
                   fontSize: 30.0,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontSize: 23.0,
+                  letterSpacing: 2.5,
+                  color: Colors.teal.shade100,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Source Sans Pro',
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.add_shopping_cart),
+                  ],
                 ),
               ),
             ],
