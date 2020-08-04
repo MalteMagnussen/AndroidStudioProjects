@@ -11,36 +11,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            //mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //verticalDirection: VerticalDirection.down,
-            //crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: <Widget>[
-              Container(
-                child: Column(mainAxisSize: MainAxisSize.max),
-                width: 100.0,
-                decoration: const BoxDecoration(color: Colors.red),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    color: Colors.yellow,
-                    height: 100.0,
-                    width: 100.0,
-                  ),
-                  Container(
-                    color: Colors.green,
-                    height: 100.0,
-                    width: 100.0,
-                  ),
-                ],
-              ),
-              Container(
-                child: Column(mainAxisSize: MainAxisSize.max),
-                width: 100.0,
-                decoration: const BoxDecoration(color: Colors.blue),
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.red,
+                backgroundImage:
+                    NetworkImage('https://i.imgur.com/79GJzUP.jpg?1'),
               ),
             ],
           ),
