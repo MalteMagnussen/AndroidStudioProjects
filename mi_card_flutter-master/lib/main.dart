@@ -15,9 +15,16 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 50,
-                backgroundColor: Colors.red,
                 backgroundImage:
                     NetworkImage('https://i.imgur.com/79GJzUP.jpg?1'),
+              ),
+              Text(
+                'Malte Hviid-Magnussen',
+                style: TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
