@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 backgroundImage:
-                    NetworkImage('https://i.imgur.com/79GJzUP.jpg?1'),
+                    NetworkImage('https://i.imgur.com/DKKCscO.jpg'),
               ),
               Text(
                 'Malte Hviid-Magnussen',
@@ -37,53 +39,45 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Source Sans Pro',
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.add_shopping_cart,
-                      color: Colors.teal,
-                      //size: 50.0,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.add_shopping_cart,
+                    color: Colors.teal,
+                    //size: 50.0,
+                  ),
+                  title: Text(
+                    '+45 42 30 12 07',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontSize: 20.0,
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('+45 42 30 12 07',
-                        style: TextStyle(
-                            color: Colors.teal.shade900,
-                            fontSize: 20.0,
-                            fontFamily: 'Source Sans Pro'))
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+              Card(
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 25.0,
                 ),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('maltehviidmagnussen@gmail.com',
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.teal.shade900,
-                            fontFamily: 'Source Sans Pro'))
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'maltehviidmagnussen@gmail.com',
+                    style: TextStyle(
+                        fontSize: 17.0,
+                        //fontWeight: FontWeight.bold,
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro'),
+                  ),
                 ),
               ),
             ],
