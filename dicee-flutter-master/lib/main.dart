@@ -22,18 +22,20 @@ class DicePage extends StatelessWidget {
     return Center(
       child: Row(
         children: <Widget>[
-          makeDice('images/dice1.png'),
-          makeDice('images/dice1.png')
+          makeDice('images/dice1.png', 'Left'),
+          makeDice('images/dice1.png', 'Right')
         ],
       ),
     );
   }
 
-  Expanded makeDice(String dice) {
+  Expanded makeDice(String dice, String name) {
     return Expanded(
       flex: 1,
       child: FlatButton(
-        onPressed: () {},
+        onPressed: () {
+          print('$name was pressed.');
+        },
         //padding: const EdgeInsets.all(0), // Overwrite
         child: Image.asset(
           dice,
