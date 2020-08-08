@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,21 +19,26 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          flex: 1,
-          child: Image(
-            image: AssetImage('images/dice1.png'),
-          ),
+    return Center(
+      child: Row(
+        children: <Widget>[
+          makeDice('images/dice1.png'),
+          makeDice('images/dice1.png')
+        ],
+      ),
+    );
+  }
+
+  Expanded makeDice(String dice) {
+    return Expanded(
+      flex: 1,
+      child: FlatButton(
+        onPressed: () {},
+        //padding: const EdgeInsets.all(0), // Overwrite
+        child: Image.asset(
+          dice,
         ),
-        Expanded(
-          flex: 1,
-          child: Image(
-            image: AssetImage('images/dice1.png'),
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
