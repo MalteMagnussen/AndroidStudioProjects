@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -22,23 +23,43 @@ class DicePage extends StatelessWidget {
     return Center(
       child: Row(
         children: <Widget>[
-          makeDice('images/dice1.png', 'Left'),
-          makeDice('images/dice1.png', 'Right')
+          MakeDice(),
+          MakeDice(),
         ],
       ),
     );
   }
+}
 
-  Expanded makeDice(String dice, String name) {
+class MakeDice extends StatefulWidget {
+  MakeDice();
+
+  @override
+  _MakeDiceState createState() => _MakeDiceState();
+}
+
+class _MakeDiceState extends State<MakeDice> {
+  Random random = new Random();
+  int randomNumber;
+
+  @override
+  Widget build(BuildContext context) {
+    @override
+    void initState() {
+      randomNumber = random.nextInt(6) + 1;
+    }
+
     return Expanded(
       flex: 1,
       child: FlatButton(
         onPressed: () {
-          print('$name was pressed.');
+          setState(() {
+            randomNumber = random.nextInt(6) + 1;
+            print('Dice was pressed.\nNew Number is: $randomNumber');
+          });
         },
-        //padding: const EdgeInsets.all(0), // Overwrite
         child: Image.asset(
-          dice,
+          'images/dice$randomNumber.png',
         ),
       ),
     );
